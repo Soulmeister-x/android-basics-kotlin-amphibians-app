@@ -15,7 +15,9 @@
  */
 package com.example.amphibians.ui
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +28,7 @@ import com.example.amphibians.databinding.FragmentAmphibianDetailBinding
 /**
  * This Fragment shows the detailed information on a particular Amphibian
  */
+private const val TAG = "AmphibianDetailFragment"
 class AmphibianDetailFragment : Fragment() {
 
     private val viewModel: AmphibianViewModel by activityViewModels()
@@ -34,6 +37,7 @@ class AmphibianDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.d(TAG, "onCreateView()")
 
         val binding = FragmentAmphibianDetailBinding.inflate(inflater)
         binding.lifecycleOwner = this
@@ -41,5 +45,30 @@ class AmphibianDetailFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return binding.root
+    }
+
+    override fun onAttach(context: Context) {
+        Log.d(TAG, "onAttach()")
+        super.onAttach(context)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate()")
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onActivityCreated()")
+        super.onActivityCreated(savedInstanceState)
+    }
+
+    override fun onStart() {
+        Log.d(TAG, "onStart()")
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Log.d(TAG,"onResume()")
+        super.onResume()
     }
 }
