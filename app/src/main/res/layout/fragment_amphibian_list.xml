@@ -41,7 +41,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/list_view_item" />
 
-        <!-- set the apiStatus binding to the status from the view model -->
+        <!-- set the apiStatus binding to the status from the view model
         <ImageView
             android:id="@+id/status_image"
             android:layout_width="wrap_content"
@@ -52,6 +52,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
